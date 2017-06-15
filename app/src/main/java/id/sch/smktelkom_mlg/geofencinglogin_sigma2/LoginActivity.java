@@ -25,9 +25,6 @@ import com.google.android.gms.maps.model.LatLng;
 import java.util.ArrayList;
 import java.util.Map;
 
-import static id.sch.smktelkom_mlg.geofencinglogin_sigma2.ListviewActivity.DATA_LAT;
-import static id.sch.smktelkom_mlg.geofencinglogin_sigma2.ListviewActivity.DATA_LONG;
-
 
 public class LoginActivity extends ActionBarActivity implements
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<Status> {
@@ -271,8 +268,8 @@ public class LoginActivity extends ActionBarActivity implements
 
                     // Set the circular region of this geofence.
                     .setCircularRegion(
-                            Double.parseDouble(DATA_LAT),
-                            Double.parseDouble(DATA_LONG),
+                            entry.getValue().latitude,
+                            entry.getValue().longitude,
                             Constants.GEOFENCE_RADIUS_IN_METERS
                     )
 

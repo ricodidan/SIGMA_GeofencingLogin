@@ -58,7 +58,6 @@ public final class Constants {
     public static final HashMap<String, LatLng> BAY_AREA_LANDMARKS = new HashMap<String, LatLng>();
 
     static {
-        new GetData().execute();
 
         // BSD KCU Serpong.
         BAY_AREA_LANDMARKS.put("BSD KCU Serpong", new LatLng(-6.295556, 106.665639));

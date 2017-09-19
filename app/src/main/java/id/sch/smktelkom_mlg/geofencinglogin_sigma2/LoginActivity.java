@@ -1,7 +1,6 @@
 package id.sch.smktelkom_mlg.geofencinglogin_sigma2;
 
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -100,7 +99,7 @@ public class LoginActivity extends ActionBarActivity implements
         buildGoogleApiClient();
 
         sharedpreferences = getSharedPreferences(mypreference,
-                Context.MODE_PRIVATE);
+                MODE_PRIVATE);
         if (sharedpreferences.contains(Name)) {
             username.setText(sharedpreferences.getString(Name, ""));
         }
